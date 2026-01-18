@@ -7,7 +7,7 @@ export const cvData: CVData = {
   location: "Dubai, United Arab Emirates",
   email: "jonesallen2002@gmail.com",
   linkedin: "https://www.linkedin.com/in/jones-allen-794308273",
-  summary: "An aspiring HR professional passionate about fostering employee well-being in the workplace. I believe in creating inclusive environments where employees feel valued and empowered to thrive. With a focus on empathy and continuous learning, I aim to implement innovative HR strategies that promote both individual growth and organizational success.",
+  summary: "I believe HR should be intelligent, automated, and deeply human-first. AI is not meant to replace people, but to remove friction from their work. By automating repetitive and manual processes, HR can shift from administration to impact. My focus is on designing systems that scale with clarity, empower employees, and enable better decisions through data.",
   skills: [
     "Automation",
     "Prompt Engineering",
@@ -49,7 +49,7 @@ export const cvData: CVData = {
   education: [
     {
       institution: "University of Madras",
-      degree: "Postgraduate Degree, Human Resources Management / Personnel Administration",
+      degree: "Postgraduate Degree, Human Resources Management",
       period: "August 2023 - May 2025"
     },
     {

@@ -19,32 +19,17 @@ const Hero: React.FC = () => {
               <span className="relative flex h-2 w-2">
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
               </span>
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Dubai Based HR Strategist</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">UAE Based HR Professional</span>
             </div>
 
             <h1 className="font-modern text-6xl md:text-8xl font-extrabold tracking-tighter text-slate-900 leading-[0.9]">
               Redefining <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Human Capital.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">people operations</span>
             </h1>
 
             <p className="max-w-xl mx-auto lg:mx-0 text-xl text-slate-500 leading-relaxed font-medium">
-              Jones Allen Sam S — An AI-augmented workplace strategist focused on user-centric employee experiences and culture growth.
+              I’m Jones Allen, working at the intersection of HR, AI, and data. I create smart workflows that reduce effort and elevate employee experience.
             </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
-              <a 
-                href="#contact" 
-                className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-slate-900 text-white font-bold text-lg hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-slate-200"
-              >
-                Inquire Now
-              </a>
-              <a 
-                href="#experience" 
-                className="w-full sm:w-auto px-10 py-5 rounded-2xl glass font-bold text-lg text-slate-900 hover:bg-white transition-all duration-300"
-              >
-                The Work
-              </a>
-            </div>
           </div>
 
           <div className="relative flex items-center justify-center">
@@ -63,7 +48,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                    <p className="text-2xl font-bold text-blue-600">85%</p>
+                    <p className="text-2xl font-bold text-blue-600">100%</p>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Efficiency</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">

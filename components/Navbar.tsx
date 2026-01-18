@@ -1,25 +1,39 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-12">
-        <div className="text-xl font-bold tracking-tight text-slate-900">
-          JONES<span className="text-blue-600">ALLEN.</span>
-        </div>
-        <div className="hidden space-x-8 text-sm font-medium text-slate-600 md:flex">
-          <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-          <a href="#experience" className="hover:text-blue-600 transition-colors">Experience</a>
-          <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
-          <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
-        </div>
-        <a 
-          href="#contact" 
-          className="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800 transition-all"
-        >
-          Hire Me
+    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/80 backdrop-blur-xl border-b border-slate-100 py-4' 
+        : 'bg-transparent py-6'
+    }`}>
+      <div className="container mx-auto flex items-center justify-between px-6 lg:px-12 max-w-7xl">
+        <a href="#" className="flex items-center gap-0">
+          <div className="font-modern text-2xl font-black tracking-tighter uppercase flex items-baseline">
+            <span className="text-slate-900">JONES</span>
+            <span className="text-blue-600">ALLEN</span>
+          </div>
         </a>
+        
+        <div className="flex items-center">
+          <a 
+            href="#contact" 
+            className="rounded-full bg-slate-900 px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-white hover:bg-blue-600 transition-all shadow-lg shadow-slate-200"
+          >
+            Connect
+          </a>
+        </div>
       </div>
     </nav>
   );

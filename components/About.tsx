@@ -10,7 +10,7 @@ const About: React.FC = () => {
           <div className="flex flex-col items-center text-center space-y-6">
             <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600">The Philosophy</h2>
             <h3 className="font-modern text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-none">
-              Empathy scaled through <span className="text-slate-400">technology.</span>
+              Building <span className="text-blue-600">Intelligent</span> People Systems
             </h3>
             <p className="mt-8 text-xl md:text-2xl leading-relaxed text-slate-500 font-medium max-w-3xl">
               {cvData.summary}
