@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { cvData } from '../data';
 
 interface Message {
@@ -35,6 +35,8 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
     setIsTyping(true);
 
     try {
+      // Initialize GoogleGenAI with API Key from process.env.API_KEY as per guidelines.
+      // Creating the instance inside handleSend ensures it uses the correct context.
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const systemPrompt = `
         You are the professional AI Assistant for Jones Allen Sam S.
@@ -43,16 +45,18 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
         Headline: ${cvData.headline}
         Summary: ${cvData.summary}
         Skills: ${cvData.skills.join(', ')}
-        Work: ${JSON.stringify(cvData.experience)}
+        Work Experience: ${JSON.stringify(cvData.experience)}
         Education: ${JSON.stringify(cvData.education)}
 
         Guidelines:
         - Be ultra-professional, concise, and insightful.
         - Emphasize his "AI-Augmented" and "UX-Centric" HR philosophy.
-        - Do not invent facts; if you don't know, redirect to his core HR strengths.
+        - Do not provide long answers; be brief.
+        - If you don't know something, stick to his core professional HR strengths.
       `;
 
-      const response = await ai.models.generateContent({
+      // Use the 'gemini-3-flash-preview' model for basic Q&A tasks as recommended.
+      const response: GenerateContentResponse = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: userMessage,
         config: {
@@ -61,10 +65,12 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
         },
       });
 
-      const text = response.text || "I'm having trouble processing that. Please try another question about my HR background.";
+      // Directly access the .text property (getter) to extract the string output.
+      const text = response.text || "I'm having trouble processing that right now. Please try asking about my HR experience or AI systems.";
       setMessages(prev => [...prev, { role: 'assistant', content: text }]);
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'assistant', content: "System connection interrupted. Please try again." }]);
+      console.error("AI Assistant Error:", error);
+      setMessages(prev => [...prev, { role: 'assistant', content: "I'm currently optimizing my systems. Please reach out via email for direct inquiries." }]);
     } finally {
       setIsTyping(false);
     }
