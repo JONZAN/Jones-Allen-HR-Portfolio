@@ -3,7 +3,7 @@ import { CVData } from './types';
 
 export const cvData: CVData = {
   name: "Jones Allen Sam S",
-  headline: "HR Assistant | Passionate about People, Culture, Climate & Growth | AI Augmented People Operations | UX-Centric Workplace Strategist",
+  headline: "HR Assistant | UAE Based HR Professional | AI Augmented People Operations | UX-Centric Workplace Strategist",
   location: "Dubai, United Arab Emirates",
   email: "jonesallen2002@gmail.com",
   linkedin: "https://www.linkedin.com/in/jones-allen-794308273",

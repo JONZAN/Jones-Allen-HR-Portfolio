@@ -64,17 +64,12 @@ const Hero: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <div className="absolute -bottom-10 -left-10 w-32 h-32 glass rounded-3xl flex items-center justify-center animate-float-slow shadow-xl">
-                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Large Name Banner with Seamless Marquee Scroll */}
+      {/* Large Name Banner */}
       <div className="w-full select-none overflow-hidden border-y border-slate-100 bg-white py-12 flex items-center">
         <div className="flex whitespace-nowrap animate-marquee">
           <h2 className="font-modern text-[20vw] font-black text-slate-900 leading-none tracking-tighter uppercase pr-12">
@@ -84,13 +79,6 @@ const Hero: React.FC = () => {
             JONES ALLEN
           </h2>
         </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7-7-7"></path>
-        </svg>
       </div>
     </section>
   );

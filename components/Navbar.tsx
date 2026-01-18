@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/80 backdrop-blur-xl border-b border-slate-100 py-4' 
+        ? 'bg-white/80 backdrop-blur-xl border-b border-slate-100 py-4 shadow-sm' 
         : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-12 max-w-7xl">
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center">
           <a 
             href="#contact" 
-            className="rounded-full bg-slate-900 px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-white hover:bg-blue-600 transition-all shadow-lg shadow-slate-200"
+            className="rounded-full bg-slate-900 px-7 py-3 text-xs font-bold uppercase tracking-widest text-white hover:bg-blue-600 transition-all shadow-lg shadow-slate-200 active:scale-95"
           >
             Connect
           </a>
